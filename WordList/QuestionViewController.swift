@@ -42,6 +42,10 @@ class QuestionViewController: UIViewController {
                 isAnswered = false
                 nextButton.setTitle("答えを表示", for: .normal)
             }else{
+                nowNumber = 0
+                performSegue(withIdentifier: "toFinishView", sender: nil)
+            }
+        } else {
                 answerLabel.text = wordArray[nowNumber]["japanese"]
                 isAnswered = true
                 nextButton.setTitle("次へ", for: .normal)
@@ -61,4 +65,4 @@ class QuestionViewController: UIViewController {
     }
     */
 
-}
+
